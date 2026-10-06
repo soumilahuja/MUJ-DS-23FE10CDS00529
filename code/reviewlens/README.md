@@ -68,7 +68,18 @@ Outputs are written to `outputs/`: `results.json`, `results.csv`, `report.md`.
 
 ## Sample result
 On the 10 sample reviews the model flagged the overheating charger as the top problem
-(high urgency) and recommended retraining customer support. See `outputs/report.md` after a run.
+(high urgency) and recommended retraining customer support. Full outputs from this run are in the results/ folder.
 
 ## Screenshots
-_Add screenshots of the CLI output and the report here._
+
+**Web UI (Streamlit) – single review analysis**
+
+![Streamlit UI](screenshots/streamlit_ui.png)
+
+**Generated report with executive summary**
+
+![Report](screenshots/report_preview.png)
+
+**Per-review structured results (CSV)**
+
+![Results CSV](screenshots/results_csv.png)
