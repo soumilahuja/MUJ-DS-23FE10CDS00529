@@ -1,0 +1,277 @@
+{
+  "stats": {
+    "count": 10,
+    "failed": 0,
+    "sentiment_counts": {
+      "positive": 4,
+      "neutral": 2,
+      "negative": 4
+    },
+    "avg_rating": 3.0,
+    "top_negative_aspects": [
+      [
+        "delivery",
+        1
+      ],
+      [
+        "packaging",
+        1
+      ],
+      [
+        "charger safety",
+        1
+      ],
+      [
+        "price",
+        1
+      ],
+      [
+        "customer support",
+        1
+      ]
+    ],
+    "top_positive_aspects": [
+      [
+        "battery life",
+        1
+      ],
+      [
+        "camera",
+        1
+      ],
+      [
+        "product performance",
+        1
+      ],
+      [
+        "sound quality",
+        1
+      ],
+      [
+        "comfort",
+        1
+      ]
+    ],
+    "high_urgency": [
+      {
+        "id": 3,
+        "issue": "The charger overheats and emits a burning smell, posing a safety hazard."
+      },
+      {
+        "id": 5,
+        "issue": "Customer support was rude and failed to resolve the issue, leading the customer to leave for another brand."
+      }
+    ]
+  },
+  "summary": "**Overall mood:** Customer sentiment is evenly split between satisfaction and frustration, resulting in a neutral average rating of 3.0 out of 5 across 10 reviews.\n\n**Top strengths:**\n* Product performance and battery life\n* Camera and sound quality\n* Comfort\n\n**Top problems:**\n* Charger safety hazard involving overheating and a burning smell\n* Poor customer support experience leading to customer churn\n* Isolated issues with delivery, packaging, and price\n\n**Recommended actions:**\n1. Immediately investigate and recall or redesign the overheating charger to eliminate the safety hazard.\n2. Conduct retraining and process improvements for customer support to prevent rude interactions and unresolved complaints.\n3. Review logistics and pricing strategies to address the delivery, packaging, and pricing friction points reported by customers.",
+  "results": [
+    {
+      "id": 1,
+      "review": "Absolutely love this phone. Battery lasts two days and the camera is superb.",
+      "sentiment": "positive",
+      "rating_estimate": 5,
+      "emotion": "delighted",
+      "aspects": [
+        {
+          "aspect": "battery life",
+          "sentiment": "positive"
+        },
+        {
+          "aspect": "camera",
+          "sentiment": "positive"
+        }
+      ],
+      "key_issue": "None",
+      "urgency": "low",
+      "suggested_reply": "Thank you for the wonderful feedback! We're thrilled you're enjoying the battery and camera."
+    },
+    {
+      "id": 2,
+      "review": "Delivery was late by a week and the box was damaged. Product itself works fine though.",
+      "sentiment": "neutral",
+      "rating_estimate": 3,
+      "emotion": "dissatisfied",
+      "aspects": [
+        {
+          "aspect": "delivery",
+          "sentiment": "negative"
+        },
+        {
+          "aspect": "packaging",
+          "sentiment": "negative"
+        },
+        {
+          "aspect": "product performance",
+          "sentiment": "positive"
+        }
+      ],
+      "key_issue": "Delivery was delayed by a week and the packaging arrived damaged.",
+      "urgency": "low",
+      "suggested_reply": "We are very sorry for the delivery delay and the damaged packaging, but we are glad to hear the product is working well. We will share your feedback with our shipping partner."
+    },
+    {
+      "id": 3,
+      "review": "The charger got extremely hot and I smelled something burning. Very dangerous! I want a refund.",
+      "sentiment": "negative",
+      "rating_estimate": 1,
+      "emotion": "angry",
+      "aspects": [
+        {
+          "aspect": "charger safety",
+          "sentiment": "negative"
+        },
+        {
+          "aspect": "refund policy",
+          "sentiment": "neutral"
+        }
+      ],
+      "key_issue": "The charger overheats and emits a burning smell, posing a safety hazard.",
+      "urgency": "high",
+      "suggested_reply": "We are very sorry for this dangerous experience. Please stop using the charger immediately, and we will contact you right away to process your refund."
+    },
+    {
+      "id": 4,
+      "review": "It's okay. Does the job, nothing special. Price is a bit high for what you get.",
+      "sentiment": "neutral",
+      "rating_estimate": 3,
+      "emotion": "calm",
+      "aspects": [
+        {
+          "aspect": "performance",
+          "sentiment": "neutral"
+        },
+        {
+          "aspect": "price",
+          "sentiment": "negative"
+        }
+      ],
+      "key_issue": "The product is considered overpriced for the value it provides.",
+      "urgency": "low",
+      "suggested_reply": "Thank you for your feedback! We appreciate your honesty and will take your comments about pricing into consideration."
+    },
+    {
+      "id": 5,
+      "review": "Customer support was rude and never resolved my issue. I'm switching to another brand.",
+      "sentiment": "negative",
+      "rating_estimate": 1,
+      "emotion": "frustrated",
+      "aspects": [
+        {
+          "aspect": "customer support",
+          "sentiment": "negative"
+        }
+      ],
+      "key_issue": "Customer support was rude and failed to resolve the issue, leading the customer to leave for another brand.",
+      "urgency": "high",
+      "suggested_reply": "We sincerely apologize for your experience with our support team. We would love the opportunity to make this right, so please reach out to us directly."
+    },
+    {
+      "id": 6,
+      "review": "Great sound quality and comfortable to wear for hours. Bluetooth connects instantly.",
+      "sentiment": "positive",
+      "rating_estimate": 5,
+      "emotion": "delighted",
+      "aspects": [
+        {
+          "aspect": "sound quality",
+          "sentiment": "positive"
+        },
+        {
+          "aspect": "comfort",
+          "sentiment": "positive"
+        },
+        {
+          "aspect": "bluetooth connectivity",
+          "sentiment": "positive"
+        }
+      ],
+      "key_issue": "None",
+      "urgency": "low",
+      "suggested_reply": "Thank you for the fantastic review! We are glad you are enjoying the sound quality and comfort."
+    },
+    {
+      "id": 7,
+      "review": "App keeps crashing after the latest update. Please fix this, it's unusable right now.",
+      "sentiment": "negative",
+      "rating_estimate": 1,
+      "emotion": "frustrated",
+      "aspects": [
+        {
+          "aspect": "app stability",
+          "sentiment": "negative"
+        },
+        {
+          "aspect": "latest update",
+          "sentiment": "negative"
+        }
+      ],
+      "key_issue": "App keeps crashing after the latest update, rendering it unusable.",
+      "urgency": "medium",
+      "suggested_reply": "We are very sorry for the inconvenience and are working on a fix for the latest update. Our team will look into this right away to get the app running smoothly for you."
+    },
+    {
+      "id": 8,
+      "review": "Packaging was beautiful and the setup took two minutes. Highly recommend to friends!",
+      "sentiment": "positive",
+      "rating_estimate": 5,
+      "emotion": "delighted",
+      "aspects": [
+        {
+          "aspect": "packaging",
+          "sentiment": "positive"
+        },
+        {
+          "aspect": "setup",
+          "sentiment": "positive"
+        }
+      ],
+      "key_issue": "None",
+      "urgency": "low",
+      "suggested_reply": "Thank you for the wonderful recommendation! We're so glad you enjoyed the packaging and found the setup easy."
+    },
+    {
+      "id": 9,
+      "review": "Screen scratched within a week even with a case. Disappointed with the build quality.",
+      "sentiment": "negative",
+      "rating_estimate": 2,
+      "emotion": "disappointed",
+      "aspects": [
+        {
+          "aspect": "screen durability",
+          "sentiment": "negative"
+        },
+        {
+          "aspect": "build quality",
+          "sentiment": "negative"
+        }
+      ],
+      "key_issue": "Screen scratched easily within a week of use despite having a case.",
+      "urgency": "medium",
+      "suggested_reply": "We are very sorry to hear about the screen scratching so quickly. Please reach out to our support team so we can look into this for you."
+    },
+    {
+      "id": 10,
+      "review": "Decent value for money. Not the fastest, but reliable for daily use.",
+      "sentiment": "positive",
+      "rating_estimate": 4,
+      "emotion": "calm",
+      "aspects": [
+        {
+          "aspect": "value for money",
+          "sentiment": "positive"
+        },
+        {
+          "aspect": "speed",
+          "sentiment": "neutral"
+        },
+        {
+          "aspect": "reliability",
+          "sentiment": "positive"
+        }
+      ],
+      "key_issue": "None",
+      "urgency": "low",
+      "suggested_reply": "Thank you for your feedback! We're glad to hear that you find it reliable for your daily needs."
+    }
+  ]
+}
