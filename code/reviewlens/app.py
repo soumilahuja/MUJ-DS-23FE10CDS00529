@@ -9,8 +9,8 @@ st.title("🔍 ReviewLens")
 st.caption("LLM-powered customer review analyzer")
 
 cfg = load_config()
-cfg["provider"] = st.sidebar.selectbox("Provider", ["anthropic", "openai", "mock"],
-                                       index=["anthropic", "openai", "mock"].index(cfg["provider"]))
+providers = ["gemini", "anthropic", "openai", "mock"]
+cfg["provider"] = st.sidebar.selectbox("Provider", providers, index=providers.index(cfg["provider"]))
 analyzer = build_analyzer(cfg)
 
 tab1, tab2 = st.tabs(["Single review", "Batch (CSV)"])
