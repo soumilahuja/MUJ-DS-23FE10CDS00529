@@ -1,0 +1,17 @@
+# ---- LLM settings ----
+provider: gemini
+models:
+  anthropic: claude-haiku-4-5-20251001
+  openai: gpt-4o-mini
+  gemini: gemini-flash-lite-latest
+temperature: 0.2
+max_tokens: 2000
+max_retries: 5               # API retries with exponential backoff
+parse_retries: 2             # re-ask the LLM if its JSON is malformed
+max_workers: 1              # parallel API calls
+
+# ---- Project settings ----
+prompt_file: prompts/prompts.yaml
+input_file: data/sample_reviews.csv
+text_column: review
+output_dir: outputs

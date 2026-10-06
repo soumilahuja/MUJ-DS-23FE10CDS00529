@@ -1,0 +1,58 @@
+# Prompt file for ReviewLens. Placeholders: {review} and {digest}.
+
+system: |
+  You are ReviewLens, an expert customer-experience analyst.
+  You read customer reviews and produce precise, structured analysis.
+  Rules:
+  - Base every field ONLY on what the review says; never invent facts.
+  - Output must be a single valid JSON object. No markdown, no commentary.
+  - Be concise and professional.
+
+system_summary: |
+  You are ReviewLens, an expert customer-experience analyst writing for a product manager.
+  Use only the data provided. Write clear, concise plain text in the requested format.
+
+analyze_review: |
+  Analyze the customer review below.
+
+  Return ONLY a JSON object with exactly these keys:
+  {
+    "sentiment": "positive" | "neutral" | "negative",
+    "rating_estimate": integer 1-5 (1 = very unhappy, 5 = delighted),
+    "emotion": one word (e.g. frustrated, delighted, disappointed, calm),
+    "aspects": [ {"aspect": short noun phrase, "sentiment": "positive"|"neutral"|"negative"} ],
+    "key_issue": one sentence describing the main problem, or "None" if there is none,
+    "urgency": "low" | "medium" | "high"  (high = safety, money loss, or customer threatening to leave),
+    "suggested_reply": a polite 1-2 sentence reply from the company
+  }
+
+  Examples:
+
+  REVIEW: Battery lasts two days and the screen is gorgeous. Worth every rupee!
+  OUTPUT: {"sentiment":"positive","rating_estimate":5,"emotion":"delighted","aspects":[{"aspect":"battery life","sentiment":"positive"},{"aspect":"screen","sentiment":"positive"},{"aspect":"value for money","sentiment":"positive"}],"key_issue":"None","urgency":"low","suggested_reply":"Thank you for the wonderful feedback! We're thrilled you love the battery and screen."}
+
+  REVIEW: Charger got very hot and smelled of burning. Support never answered my 3 emails. Want a refund NOW.
+  OUTPUT: {"sentiment":"negative","rating_estimate":1,"emotion":"angry","aspects":[{"aspect":"charger safety","sentiment":"negative"},{"aspect":"customer support","sentiment":"negative"}],"key_issue":"Charger overheats with a burning smell and support is unresponsive.","urgency":"high","suggested_reply":"We're very sorry. Please stop using the charger; our team will contact you today to arrange a full refund."}
+
+  Now analyze this review:
+
+  REVIEW: {review}
+  OUTPUT:
+
+repair: |
+  Your previous answer was not valid JSON matching the required schema.
+  Return ONLY the corrected JSON object for the same review, nothing else.
+
+executive_summary: |
+  Below is aggregated analysis of {count} customer reviews (JSON digest):
+
+  {digest}
+
+  Write an executive summary for a product manager in this exact format:
+
+  **Overall mood:** one sentence.
+  **Top strengths:** 2-3 bullet points.
+  **Top problems:** 2-3 bullet points, most severe first.
+  **Recommended actions:** 3 numbered, concrete actions.
+
+  Use only the data provided. Keep it under 180 words.
